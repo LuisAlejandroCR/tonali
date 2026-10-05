@@ -42,7 +42,6 @@ por él.
 |---|---|---|
 | Gisell Arroyo | G1s3llA | CEO |
 | Luis Cardenas | [LuisAlejandroCR](https://github.com/LuisAlejandroCR) | CTO |
-| ⏳ | ⏳ | ⏳ |
 
 - **Responsable de las entregas:** G1s3llA y alejooo
 - **Canal de coordinación interna:** Discord
