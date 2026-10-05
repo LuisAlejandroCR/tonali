@@ -8,3 +8,7 @@ No confundir con docs/memoria.md (decisiones y bitácora): aquí sólo va lo que
   remoto commitea con su propia identidad si no se le pasa `--author`.
 - **Un registro inalterable no vuelve verdadero un dato falso.** La tecnología resuelve quién escribió
   qué y cuándo, pero no que lo escrito corresponda al mundo físico: eso sigue pidiendo verificación.
+- **Un archivo local sin rastrear bloquea el `pull` si el remoto trae uno con el mismo nombre.** Antes
+  de borrarlo, compararlo: aquí el local era la plantilla vacía y el bueno era el del remoto (05/10/2026).
+- **Un "enlace obligatorio" no exige una herramienta externa.** Un ancla al mismo documento en GitHub
+  cumple la plantilla sin sacar el contenido del repo (05/10/2026).

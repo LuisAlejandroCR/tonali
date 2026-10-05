@@ -13,7 +13,7 @@ reúne los entregables semanales del curso BB101, a partir de la plantilla
 | Semana | Carpeta | Entregable |
 |---|---|---|
 | 1 | [docs/semana1](docs/semana1) | Problem Brief: propuestas individuales + [ProblemBrief.md](docs/semana1/ProblemBrief.md) |
-| 2 | [docs/semana2](docs/semana2) | Product Blueprint: historias de usuario individuales + [ProductBlueprint.md](docs/semana2/ProductBlueprint.md) (⏳ en borrador) |
+| 2 | [docs/semana2](docs/semana2) | Product Blueprint: historias de usuario individuales + [ProductBlueprint.md](docs/semana2/ProductBlueprint.md) · [tablero Kanban](https://github.com/users/LuisAlejandroCR/projects/2) |
 | 3 | — | ⏳ pendiente (aún no se publica) |
 | 4 | — | ⏳ pendiente (aún no se publica) |
 | 5 | — | ⏳ pendiente (aún no se publica) |

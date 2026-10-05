@@ -22,13 +22,15 @@ Plantilla del curso: [ProyectoBase/docs/semana2](https://github.com/mestupinanm/
 
 | # | Tarea | Responsable | Estado |
 |---|---|---|---|
-| 1 | Quitar `docs/semana2/` del `.gitignore` | Luis | ✅ hecho, ⏳ sin commit |
-| 2 | Historias individuales de Luis (`Luis_Cardenas.md`) | Luis | ✅ borrador, ⏳ sin commit |
-| 3 | Historias individuales de Gisell (`Gisell_Arroyo.md`) | Gisell | ⏳ pendiente |
-| 4 | Integrar las historias de Gisell en la sección 1 del blueprint | Equipo | ⏳ pendiente |
-| 5 | Crear el tablero en GitHub Projects y pegar su enlace en la sección 6 | Equipo | ⏳ pendiente |
-| 6 | Confirmar el soporte de passkeys en Stellar (sección 8) | Luis | ⏳ pendiente |
-| 7 | Revisión final del blueprint y commit del grupo | Equipo | ⏳ pendiente |
+| 1 | Quitar `docs/semana2/` del `.gitignore` | Luis | ✅ |
+| 2 | Historias individuales de Luis (`Luis_Cardenas.md`) | Luis | ✅ |
+| 3 | Historias individuales de Gisell (`Gisell_Arroyo.md`) | Gisell | ✅ subidas · ⏳ falta la extensión `.md` y el formato de la plantilla |
+| 4 | Integrar las historias de Gisell en la sección 1 del blueprint | Equipo | ✅ `3b0ba65` |
+| 5 | Crear el tablero en GitHub Projects y pegar su enlace en la sección 6 | Equipo | ✅ [tablero](https://github.com/users/LuisAlejandroCR/projects/2) público, 7 tarjetas, vista Board · `92f89d5` |
+| 6 | Confirmar el soporte de passkeys en Stellar (sección 8) | Luis | ✅ CAP-0051 |
+| 7 | Revisión final del blueprint y commit del grupo | Equipo | ✅ |
+
+**Verify (05/10/2026):** criterios 2 a 5 cumplidos. El criterio 1 sólo falta en el formato del archivo de Gisell.
 
 ## Semanas 3 a 5
 

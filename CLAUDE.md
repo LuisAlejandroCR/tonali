@@ -1,27 +1,32 @@
-# CLAUDE.md — <Proyecto>
+<!-- CLAUDE.md: guía para Claude Code en el repo TONALI: misión, contexto, reglas, stack e idioma.
+No confundir con AGENTS.md, la constitución que aplica a cualquier agente: este archivo es la capa
+específica del proyecto y no la reemplaza. -->
+# CLAUDE.md — TONALI
 
 > Guía para Claude Code en este repositorio. **No reemplaza a [`AGENTS.md`](AGENTS.md)** — esa es
 > la constitución. Este archivo es la capa específica: contexto, herencia, idioma y estilo.
 >
-> Archivo **privado**: `.gitignore` excluye `CLAUDE.md`, `AGENTS.md` y `docs/`.
+> Se versiona en el repo por decisión del equipo (ver `docs/memoria.md`): `CLAUDE.md`, `AGENTS.md` y
+> `docs/` son públicos. Nada de secretos ni datos personales aquí.
 
 ## Norte — la misión
 
-> *<una frase: para quién es y qué cambia en su vida>*
+> *Que quien compra una barra TONALI pueda comprobar quién cultivó lo que come, sin tener que creerle
+> sólo a la marca, y que el pequeño productor tenga prueba de que su cosecha llegó ahí.*
 
 Cosas que tienen que ser ciertas:
 
-1. <promesa al usuario 1>
-2. <promesa al usuario 2>
-3. <exclusión no negociable>
+1. Consultar el origen no pide cuenta, billetera ni app: basta con escanear el QR.
+2. Cada registro lo firma quien conoce el hecho (productor, acopiador, marca) y nadie lo reescribe.
+3. Fotos y datos personales nunca suben a la cadena: ahí sólo va la huella (*hash*).
 
 ## Contexto
 
 | Dato | Valor |
 |---|---|
-| Entrega / deadline | <fecha> |
-| Jurado / cliente | <quién> |
-| Criterio de evaluación | <rúbrica> |
+| Entrega / deadline | Semanal, curso BB101. Semana 2: domingo 4 de octubre de 2026, 5:00 p.m. (hora de México), carga en Apex |
+| Jurado / cliente | Docentes del curso BB101 · ⏳ confirmar nombres |
+| Criterio de evaluación | Plantilla de cada semana en [ProyectoBase](https://github.com/mestupinanm/ProyectoBase) · ⏳ rúbrica detallada |
 
 ## Arranque de sesión (obligatorio)
 
@@ -66,7 +71,9 @@ No asumir el estado de un archivo sin leerlo.
 
 | Excluido | Razón |
 |---|---|
-| <fuente/feature> | <por qué, en una línea> |
+| Fotos y datos personales en la red | El registro es público e inalterable: no se pueden borrar después. |
+| Pagos al productor en el MVP | Sólo tienen sentido si se validan antes los supuestos 1 y 2. |
+| Mainnet en el MVP | El piloto corre en testnet, sin costo real. |
 
 ## Variables de entorno
 
@@ -74,16 +81,16 @@ Viven en `.env` (gitignored). Documentar el **nombre**, nunca el contenido.
 
 | Variable | Nota |
 |---|---|
-| `<NOMBRE>` | ✅ configurada / ⏳ pendiente |
+| — | Todavía no hay código ni variables. |
 
 ## Stack
 
 | Capa | Tecnología |
 |---|---|
-| Frontend | |
-| Backend | |
-| Datos | |
-| Deploy | |
+| Frontend | App web para celular, panel de la marca y página pública del QR · ⏳ framework por definir |
+| Backend | Servicio de TONALI que prepara transacciones y guarda fotos · ⏳ por definir |
+| Datos | Contrato Soroban en testnet de Stellar, cuentas con passkey · fotos fuera de la cadena |
+| Deploy | ⏳ por definir |
 
 ## Idioma
 
@@ -97,8 +104,9 @@ Viven en `.env` (gitignored). Documentar el **nombre**, nunca el contenido.
 
 ## Version control
 
-- Repo: <url> · rama `main`.
-- **Público:** código y `README.md`. **Privado (gitignored):** `docs/`, `CLAUDE.md`, `AGENTS.md`, `.env`.
+- Repo: <https://github.com/LuisAlejandroCR/tonali> · rama `main`.
+- **Público:** todo lo versionado, incluidos `docs/`, `CLAUDE.md` y `AGENTS.md`. **Privado (gitignored):** `.env` y las carpetas de semanas aún no publicadas.
+- Cada integrante sube su archivo individual con su propio commit: el historial es evidencia de autoría.
 - El agente prepara, el humano commitea.
 
 ## Output style: ADHD mode (activo por defecto)

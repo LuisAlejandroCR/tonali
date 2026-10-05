@@ -1,3 +1,6 @@
+<!-- AGENTS.md: constitución del proyecto TONALI para cualquier agente de IA: reglas, bloques de
+evaluación, SDD, documentación y cierre. No confundir con CLAUDE.md, que es la capa específica
+(misión, contexto, stack) y se apoya en este archivo. -->
 # AGENTS.md — Constitución del proyecto
 
 > **CONTRATO OBLIGATORIO DEL AGENTE**
