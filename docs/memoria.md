@@ -19,7 +19,7 @@ No confundir con verificacion.md, que lista qué datos están comprobados y cuá
 | MVP en testnet, con un solo insumo (amaranto) | Valida los supuestos 1 y 2 sin costo real y sin carga operativa extra. |
 | El consumidor sólo lee: sin cuenta y sin billetera | La lectura del QR no debe tener fricción. Las escrituras las firma quien conoce el hecho. |
 | Fotos y datos personales fuera de la cadena; en la red sólo va la huella (*hash*) de la foto y un identificador del productor | Minimizar los datos personales expuestos en un registro público e inalterable. |
-| El Lean Canvas va como tabla dentro de `ProductBlueprint.md` | El entregable pide no usar documentos externos. |
+| El Lean Canvas va como tabla dentro de `ProductBlueprint.md` | El entregable pide no usar documentos externos. El enlace obligatorio apunta al ancla `#5-lean-canvas` del mismo archivo. |
 | `CLAUDE.md` y `AGENTS.md` se versionan en el repo | Decisión del equipo: compartir las reglas con todos los integrantes. |
 
 ## Enfoque técnico (semana 2, borrador)
@@ -41,3 +41,4 @@ No confundir con verificacion.md, que lista qué datos están comprobados y cuá
 | 2026-09-30 | Se quitó `docs/semana2/` del `.gitignore`: la carpeta de la semana 2 no se habría subido. |
 | 2026-09-30 | Borradores de `docs/semana2/Luis_Cardenas.md` (7 historias) y `docs/semana2/ProductBlueprint.md` (8 secciones). Faltan las historias de Gisell, el enlace al Kanban y la tercera persona del equipo. |
 | 2026-09-30 | Se crearon `docs/memoria.md`, `docs/verificacion.md`, `docs/plan.md` y `LEARNINGS.md` para que cualquier agente del equipo arranque con contexto. |
+| 2026-10-05 | Blueprint: se integraron las historias de Gisell (sus #1, #2 y #6 entran como historias 3, 7 y 5; las demás quedan fuera con motivo), se renumeró §4, se cerraron los ⏳ del Lean Canvas y de passkeys (CAP-0051). Sigue pendiente el enlace al Kanban. |

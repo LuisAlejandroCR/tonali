@@ -32,10 +32,16 @@ enlazar el lote y consultarlo. *Debería* es lo que suma confianza pero no bloqu
 | :---: | --- | :---: | --- |
 | 1 | Como pequeño productor quiero registrar cada entrega desde mi celular en pocos pasos para tener una prueba de que esa cosecha es mía y saber a dónde llegó. | Luis Cardenas | Imprescindible: ataca la causa raíz (fricción 1). |
 | 2 | Como TONALI quiero crear un lote de barras y enlazarlo con las entregas de insumo que usé para que cada empaque lleve una historia de origen revisable. | Luis Cardenas | Imprescindible: sin este enlace el QR no muestra nada. |
-| 3 | Como consumidor quiero escanear el QR del empaque y ver qué productores y qué entregas componen mi barra para comprobar el origen. | Luis Cardenas | Imprescindible: es el cambio que vive el usuario principal. |
+| 3 | Como consumidor quiero escanear el QR del empaque y ver qué productores y qué entregas componen mi barra para comprobar el origen. | Luis Cardenas y Gisell Arroyo | Imprescindible: es el cambio que vive el usuario principal. Los dos la propusimos por separado. |
 | 4 | Como acopiador quiero confirmar la recepción de una entrega para que quede una constancia que ven todas las partes. | Luis Cardenas | Debería: segunda firma independiente en el punto donde se pierde el rastro. |
-| 5 | Como verificador de campo quiero adjuntar una visita con foto y fecha a una entrega para respaldar que el dato corresponde al mundo físico. | Luis Cardenas | Debería: responde al supuesto 3 (el “oráculo”). |
-| ⏳ | Historias de Gisell Arroyo | Gisell Arroyo | ⏳ pendiente: integrar cuando suba `Gisell_Arroyo.md` de la semana 2. |
+| 5 | Como consumidor quiero consultar la fecha de elaboración y el lote de mi producto para identificarlo si necesito hacer una aclaración. | Gisell Arroyo | Debería: son dos datos más en la misma página del QR y casi no cuestan. |
+| 6 | Como verificador de campo quiero adjuntar una visita con foto y fecha a una entrega para respaldar que el dato corresponde al mundo físico. | Luis Cardenas | Debería: responde al supuesto 3 (el “oráculo”). |
+| 7 | Como productor local quiero recibir una notificación cuando mi entrega sea aceptada para saber que se recibió correctamente. | Gisell Arroyo | Podría: el aviso sale de la confirmación del acopiador (historia 4). Sube la adopción del productor (supuesto 2), pero el recorrido funciona sin él. |
+
+**Quedan fuera por ahora:** la revisión de calidad por lote, el inventario de insumo por productor, la
+consulta del distribuidor y los reportes (Gisell Arroyo), y el historial de correcciones y el panel del
+productor (Luis Cardenas). Son operación interna o valor de segundo orden: no ponen a prueba la
+hipótesis. El inventario y los reportes saldrán casi solos de los mismos registros cuando existan.
 
 ---
 
@@ -96,10 +102,11 @@ controle sola la historia del lote.
 | Dentro del MVP (funcionalidad central) | Fuera del MVP (deseable, para después) |
 | --- | --- |
 | Registro de entrega firmado por el productor (historia 1). | Pago directo al productor en la red o sobreprecio compartido. |
-| Confirmación de la entrega por el acopiador (historia 4). | Verificación de campo con validadores externos (historia 5): en el piloto la hace el equipo. |
+| Confirmación de la entrega por el acopiador (historia 4). | Verificación de campo con validadores externos (historia 6): en el piloto la hace el equipo. |
 | Creación de lote enlazado con entregas (historia 2). | Panel del productor con los lotes donde terminó su cosecha. |
-| Página pública del QR, sin cuenta ni billetera (historia 3). | Historial visible de correcciones (hoy sólo se agregan registros, no se editan). |
+| Página pública del QR, sin cuenta ni billetera, con fecha de elaboración y número de lote (historias 3 y 5). | Historial visible de correcciones (hoy sólo se agregan registros, no se editan). |
 | Red de prueba de Stellar (testnet) con un solo insumo: amaranto. | Varios insumos, varias marcas y red principal (mainnet). |
+| | Aviso al productor cuando aceptan su entrega (historia 7). |
 
 **Por qué el recorte sigue entregando valor:** el MVP recorre la cadena completa, del productor al
 consumidor, para un insumo y un lote real. Eso basta para validar los dos supuestos que pueden tumbar la
@@ -113,7 +120,8 @@ agregar cacahuate o miel es repetir el mismo registro.
 
 ## 5. Lean Canvas
 
-**Enlace al Lean Canvas (obligatorio):** ⏳ pendiente. Mientras tanto, el lienzo va aquí mismo:
+**Enlace al Lean Canvas (obligatorio):** [Lean Canvas de TONALI](https://github.com/LuisAlejandroCR/tonali/blob/main/docs/semana2/ProductBlueprint.md#5-lean-canvas)
+(el lienzo vive en este mismo documento, para no depender de una herramienta externa).
 
 | Bloque | Contenido |
 | --- | --- |
@@ -124,8 +132,8 @@ agregar cacahuate o miel es repetir el mismo registro.
 | **Canales** | El propio empaque (QR) · puntos de venta de TONALI · redes sociales de la marca · contacto directo con productores. |
 | **Métricas clave** | % de entregas registradas en el origen · % de lotes con QR completo · escaneos por lote vendido · productores activos. |
 | **Ventaja diferencial** | Un imitador puede copiar el discurso, pero no un historial firmado por productores reales y fechado desde el primer lote. |
-| **Estructura de costos** | Desarrollo de la app · comisiones de la red · capacitación a productores · verificación de campo. ⏳ Estimar y compararlo con el margen por barra del Problem Brief. |
-| **Flujos de ingreso** | Venta de la barra (el sobreprecio de lo local ahora es comprobable). A futuro: ofrecer el registro a otras marcas artesanales. ⏳ Validar. |
+| **Estructura de costos** | Desarrollo de la app · comisiones de la red · capacitación a productores · verificación de campo. Margen de referencia: $20 de precio menos $8.96 de costo deja $11.04 MXN por barra (supuestos del equipo, Problem Brief). En testnet la red no tiene costo real. El costo por lote se medirá en el piloto, antes de pasar a mainnet. |
+| **Flujos de ingreso** | Venta de la barra a $20 MXN (supuesto del equipo): el sobreprecio de lo local ahora es comprobable. Hipótesis a futuro, fuera del MVP: ofrecer el registro a otras marcas artesanales. |
 
 ---
 
@@ -189,5 +197,8 @@ peso de la certificadora.
 | **Testnet** (red de prueba) | Correr el piloto sin costo real. | Permite validar los supuestos antes de pagar comisiones en la red principal. |
 
 Fuera del MVP: pagos en *stablecoin* sobre Stellar para pagarle directo al productor, cuando el
-supuesto 2 esté validado. ⏳ Confirmar en la documentación oficial de Stellar el soporte vigente de
-passkeys en Soroban antes de fijar la arquitectura.
+supuesto 2 esté validado.
+
+Soporte de passkeys confirmado: el Protocol 21 de Stellar agregó a Soroban la verificación de firmas
+secp256r1, la curva que usan las passkeys ([CAP-0051](https://github.com/stellar/stellar-protocol/blob/master/core/cap-0051.md),
+estado *Final*; consultado el 05/10/2026).

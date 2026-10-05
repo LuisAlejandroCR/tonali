@@ -22,7 +22,8 @@ Cada dato lleva una de tres marcas:
 | Precio propuesto: $20 MXN por barra | Problem Brief, Product Blueprint | Equipo | 🧪 |
 | Costo estimado: $8.96 MXN por unidad | Problem Brief | Equipo | 🧪 ⏳ documentar el desglose |
 | Lote de unas 100 barras | Problem Brief, Product Blueprint | Equipo | 🧪 |
-| Stellar admite passkeys para firmar con contratos Soroban | `semana2/ProductBlueprint.md` | Documentación de Stellar | ⏳ pendiente de confirmar |
+| Stellar admite passkeys para firmar con contratos Soroban | `semana2/ProductBlueprint.md` | [CAP-0051](https://github.com/stellar/stellar-protocol/blob/master/core/cap-0051.md) (Protocol 21, estado *Final*) y la [guía de cuentas contrato](https://developers.stellar.org/docs/build/guides/contract-accounts), consultadas el 05/10/2026 | ✅ |
+| Margen de referencia: $11.04 MXN por barra ($20 − $8.96) | `semana2/ProductBlueprint.md` (Lean Canvas) | Cálculo del equipo sobre dos supuestos | 🧪 hereda el estado de precio y costo |
 
 ## Pendientes de conseguir
 
