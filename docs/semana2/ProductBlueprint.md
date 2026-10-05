@@ -139,8 +139,10 @@ agregar cacahuate o miel es repetir el mismo registro.
 
 ## 6. Backlog priorizado (Kanban)
 
-**Enlace al tablero (obligatorio):** ⏳ pendiente: crear el tablero en GitHub Projects y pegar el enlace
-aquí.
+**Enlace al tablero (obligatorio):** [TONALI · Backlog en GitHub Projects](https://github.com/users/LuisAlejandroCR/projects/2)
+
+Cada tarjeta es una historia de la sección 1, con su prioridad (MoSCoW), su alcance (MVP o después) y sus
+criterios de aceptación.
 
 ---
 
