@@ -144,6 +144,8 @@ Es lo que abre el QR del empaque. No pide cuenta, billetera ni app. La pantalla 
 - **Después de cada acción:** mensaje con el hecho y su identificador, anuncio para lectores de pantalla,
   botón al siguiente paso y, en el celular, una vibración breve que se puede desactivar en Inicio
   (propuesta completa en [`docs/Propuesta-UI-UX.md`](../Propuesta-UI-UX.md)).
+- **Icono:** una semilla de amaranto con un camino de tres nodos (productor, acopiador, TONALI), sin
+  símbolos de blockchain ni sellos de certificación; detalle en [`docs/icono-app.md`](../icono-app.md).
 - **Accesibilidad:** textos en español, controles de al menos 44 px, modo claro y oscuro, avisos que leen
   los lectores de pantalla.
 

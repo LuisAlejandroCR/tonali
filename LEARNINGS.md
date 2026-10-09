@@ -12,3 +12,6 @@ No confundir con docs/memoria.md (decisiones y bitácora): aquí sólo va lo que
   de borrarlo, compararlo: aquí el local era la plantilla vacía y el bueno era el del remoto (05/10/2026).
 - **Un "enlace obligatorio" no exige una herramienta externa.** Un ancla al mismo documento en GitHub
   cumple la plantilla sin sacar el contenido del repo (05/10/2026).
+- **Chrome headless no baja de unos 500 px de ancho.** Las capturas “de celular” a 360–390 px salen
+  recortadas sin aviso; para revisar pantallas estrechas sirve el emulador de viewport del navegador, y para
+  capturas, 500 px (09/10/2026).

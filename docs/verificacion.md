@@ -27,6 +27,7 @@ Cada dato lleva una de tres marcas:
 | *Manage Data* borra la entrada si no hay valor; nombre y valor de hasta 64 bytes | `semana3/Documentacion.md` | [Lista de operaciones de Stellar](https://developers.stellar.org/docs/learn/fundamentals/transactions/list-of-operations), consultada el 08/10/2026 | ✅ |
 | passkey-kit crea billeteras inteligentes con passkeys en Stellar; el repo se movió a `stellar/passkey-kit` | `semana3/Documentacion.md` | [README de passkey-kit](https://github.com/kalepail/passkey-kit), consultado el 08/10/2026 | ✅ |
 | Barra de 40 g; ingredientes: avena, cacahuate, cacao, amaranto, miel, chía y canela; lema “Energía que nace de nuestras raíces” | Página pública del lote (`frontend/src/app/lote/[id].tsx`) | Problem Brief y `README.md` anterior | 🧪 ⏳ validar contra la etiqueta final |
+| Paleta del icono y de la app (cacao `#2B1A12`, crema `#FBF6EE`, amaranto `#8C1D40`, verde `#2F6B3B`) | `docs/icono-app.md`, `frontend/src/constants/theme.ts` | Propuesta del equipo | 🧪 ⏳ comparar con el empaque final |
 
 ## Pendientes de conseguir
 
