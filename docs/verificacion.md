@@ -24,6 +24,9 @@ Cada dato lleva una de tres marcas:
 | Lote de unas 100 barras | Problem Brief, Product Blueprint | Equipo | 🧪 |
 | Stellar admite passkeys para firmar con contratos Soroban | `semana2/ProductBlueprint.md` | [CAP-0051](https://github.com/stellar/stellar-protocol/blob/master/core/cap-0051.md) (Protocol 21, estado *Final*) y la [guía de cuentas contrato](https://developers.stellar.org/docs/build/guides/contract-accounts), consultadas el 05/10/2026 | ✅ |
 | Margen de referencia: $11.04 MXN por barra ($20 − $8.96) | `semana2/ProductBlueprint.md` (Lean Canvas) | Cálculo del equipo sobre dos supuestos | 🧪 hereda el estado de precio y costo |
+| *Manage Data* borra la entrada si no hay valor; nombre y valor de hasta 64 bytes | `semana3/Documentacion.md` | [Lista de operaciones de Stellar](https://developers.stellar.org/docs/learn/fundamentals/transactions/list-of-operations), consultada el 08/10/2026 | ✅ |
+| passkey-kit crea billeteras inteligentes con passkeys en Stellar; el repo se movió a `stellar/passkey-kit` | `semana3/Documentacion.md` | [README de passkey-kit](https://github.com/kalepail/passkey-kit), consultado el 08/10/2026 | ✅ |
+| Barra de 40 g; ingredientes: avena, cacahuate, cacao, amaranto, miel, chía y canela; lema “Energía que nace de nuestras raíces” | Página pública del lote (`frontend/src/app/lote/[id].tsx`) | Problem Brief y `README.md` anterior | 🧪 ⏳ validar contra la etiqueta final |
 
 ## Pendientes de conseguir
 

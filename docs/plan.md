@@ -32,6 +32,44 @@ Plantilla del curso: [ProyectoBase/docs/semana2](https://github.com/mestupinanm/
 
 **Verify (05/10/2026):** criterios 2 a 5 cumplidos. El criterio 1 sólo falta en el formato del archivo de Gisell.
 
-## Semanas 3 a 5
+## Semana 3: Functional Proof
+
+Fecha límite: **domingo 11 de octubre de 2026**, con una sola carga del repositorio en Apex. El enunciado
+dice 7:00 p.m. (hora de México) en el encabezado y 10:00 a.m. en la lista de verificación: se toma
+**10:00 a.m.** para no arriesgar la entrega.
+
+### Criterios de aceptación
+
+1. `frontend/` (fuera de `docs/`) se instala y corre con los comandos del `README.md`, en el navegador y
+   en Expo Go, y recorre el flujo principal del MVP: registrar entrega → confirmarla → crear el lote con
+   su QR → consultar el lote como consumidor.
+2. `docs/semana3/Documentacion.md` tiene las cuatro secciones en orden: Front construido (400–2000
+   palabras, con capturas), Decisión técnica (200–500 palabras), Participación del equipo, Bloqueos y
+   siguiente paso.
+3. La decisión de contratos dice la opción (A o B), por qué y qué se descartó, apoyada en la sección 8
+   del Blueprint. No se escribe ni se despliega ningún contrato.
+4. `README.md` sólo tiene Requisitos, Instalación y Cómo correrlo.
+5. Cada integrante tiene al menos un commit propio en el repositorio durante la semana 3.
+6. Tests, lint y typecheck pasan. Las fotos no salen del dispositivo y no se guardan datos personales.
+7. `docs/semana3/` ya no está en el `.gitignore` (lección de la semana 2).
+
+### Bloques
+
+| # | Tarea | Responsable | Estado |
+|---|---|---|---|
+| 1 | Sacar `docs/semana3/` del `.gitignore` y quitar la plantilla vacía `NombreApellido1.md` | Luis | ✅ |
+| 2 | Proyecto Expo en `frontend/` (SDK 57, expo-router, TypeScript) | Luis | ✅ |
+| 3 | Dominio: registro simulado que sólo agrega (entregas, confirmaciones, lotes), con tests | Luis | ✅ |
+| 4 | Pantallas: inicio, productor, acopiador, panel de la marca y página pública del lote | Luis | ✅ |
+| 5 | `docs/semana3/Documentacion.md` con capturas | Equipo | ✅ borrador · ⏳ fila de Gisell en Participación |
+| 6 | `README.md` de ejecución | Luis | ✅ |
+| 7 | Commit propio de Gisell (sección de participación o revisión de la página del consumidor) | Gisell | ⏳ |
+| 8 | Opcional: publicar la versión web y pegar el enlace en el campo *Website* de Apex | Luis | ⏳ |
+| 9 | Carga en Apex | Equipo | ⏳ |
+
+**Verify (08/10/2026):** typecheck, lint, 38 tests y `expo-doctor` pasan; build web exportado; flujo completo
+recorrido en el navegador. Falta: criterio 5 (commit de Gisell) y probar la foto en Expo Go.
+
+## Semanas 4 y 5
 
 ⏳ pendiente (aún no se publican).

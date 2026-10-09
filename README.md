@@ -1,19 +1,33 @@
-<!-- README.md: portada del repositorio TONALI (curso BB101) e índice de entregables.
-No confundir con docs/semana1/ProblemBrief.md, que es el entregable en sí. -->
+<!-- README.md: cómo instalar y correr el front de TONALI (requisitos, instalación, ejecución).
+Sólo eso, por regla del curso. La explicación del producto vive en docs/semana3/Documentacion.md. -->
 # TONALI
 
-> “Energía que nace de nuestras raíces.”
+## Requisitos
 
-Barra nutritiva de cacao, cacahuate y amaranto con identidad de Morelos, México. Este repositorio
-reúne los entregables semanales del curso BB101, a partir de la plantilla
-[ProyectoBase](https://github.com/mestupinanm/ProyectoBase).
+- [Node.js](https://nodejs.org/) 20 o superior (incluye npm).
+- Para verlo en el celular: la app **Expo Go** (Android o iOS), en la misma red Wi-Fi que la computadora.
 
-## Entregables
+## Instalación
 
-| Semana | Carpeta | Entregable |
-|---|---|---|
-| 1 | [docs/semana1](docs/semana1) | Problem Brief: propuestas individuales + [ProblemBrief.md](docs/semana1/ProblemBrief.md) |
-| 2 | [docs/semana2](docs/semana2) | Product Blueprint: historias de usuario individuales + [ProductBlueprint.md](docs/semana2/ProductBlueprint.md) · [tablero Kanban](https://github.com/users/LuisAlejandroCR/projects/2) |
-| 3 | — | ⏳ pendiente (aún no se publica) |
-| 4 | — | ⏳ pendiente (aún no se publica) |
-| 5 | — | ⏳ pendiente (aún no se publica) |
+```bash
+cd frontend
+npm install
+```
+
+## Cómo correrlo
+
+En el navegador:
+
+```bash
+npm run web
+```
+
+Abre <http://localhost:8081>.
+
+En el celular:
+
+```bash
+npm start
+```
+
+Escanea con Expo Go el QR que aparece en la terminal.

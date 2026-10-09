@@ -24,7 +24,7 @@ Cosas que tienen que ser ciertas:
 
 | Dato | Valor |
 |---|---|
-| Entrega / deadline | Semanal, curso BB101. Semana 2: domingo 4 de octubre de 2026, 5:00 p.m. (hora de México), carga en Apex |
+| Entrega / deadline | Semanal, curso BB101. Semana 3: domingo 11 de octubre de 2026 (se toma 10:00 a.m., hora de México), carga en Apex |
 | Jurado / cliente | Docentes del curso BB101 · ⏳ confirmar nombres |
 | Criterio de evaluación | Plantilla de cada semana en [ProyectoBase](https://github.com/mestupinanm/ProyectoBase) · ⏳ rúbrica detallada |
 
@@ -81,13 +81,13 @@ Viven en `.env` (gitignored). Documentar el **nombre**, nunca el contenido.
 
 | Variable | Nota |
 |---|---|
-| — | Todavía no hay código ni variables. |
+| `EXPO_PUBLIC_SITE_URL` | Opcional. Dominio público que va en el QR de cada lote. |
 
 ## Stack
 
 | Capa | Tecnología |
 |---|---|
-| Frontend | App web para celular, panel de la marca y página pública del QR · ⏳ framework por definir |
+| Frontend | Expo SDK 57 (React Native + web), expo-router, TypeScript · `frontend/` |
 | Backend | Servicio de TONALI que prepara transacciones y guarda fotos · ⏳ por definir |
 | Datos | Contrato Soroban en testnet de Stellar, cuentas con passkey · fotos fuera de la cadena |
 | Deploy | ⏳ por definir |
