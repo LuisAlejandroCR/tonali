@@ -149,7 +149,140 @@ Es lo que abre el QR del empaque. No pide cuenta, billetera ni app. La pantalla 
 - **Accesibilidad:** textos en español, controles de al menos 44 px, modo claro y oscuro, avisos que leen
   los lectores de pantalla.
 
-## 2. Decisión técnica
+
+## 2. Arquitectura general del sistema
+
+TONALI se organiza en diferentes componentes que trabajan en conjunto para registrar y consultar el origen de los ingredientes utilizados en la elaboración de las barras de amaranto.
+
+### Componentes principales
+
+- **Frontend:** aplicación desarrollada con Expo, React Native y TypeScript. Permite que cada usuario realice las acciones correspondientes a su rol.
+- **Capa de dominio:** contiene las reglas de negocio, las validaciones y la lógica para registrar eventos, confirmar entregas y relacionar insumos con lotes.
+- **Módulo de trazabilidad:** organiza la información de los productores, las entregas recibidas y los lotes elaborados.
+- **Código QR:** permite al consumidor acceder a la página pública y consultar la información disponible sobre el origen de su producto.
+- **Contrato inteligente planeado:** se encargará de aplicar las reglas de registro y confirmación en Stellar mediante Soroban, una vez que se complete su implementación.
+
+### Diagrama de arquitectura
+
+```mermaid
+flowchart TD
+    A[Productor] --> B[Aplicación TONALI]
+    C[Acopiador] --> B
+    D[Personal de TONALI] --> B
+    B --> E[Capa de dominio y validaciones]
+    E --> F[Registro de eventos]
+    F --> G[Relación entre entregas y lotes]
+    G --> H[Código QR]
+    H --> I[Página pública de trazabilidad]
+    I --> J[Consumidor]
+    E -. Integración futura .-> K[Contrato Soroban en Stellar]
+```
+
+**Estado actual:** la aplicación utiliza datos locales de demostración y firmas simuladas. La conexión con el contrato inteligente y la publicación de registros en Stellar son actividades pendientes.
+
+## 3. Reglas de negocio de TONALI
+
+Para conservar la trazabilidad de los ingredientes, el sistema contempla las siguientes reglas:
+
+1. El productor puede registrar una entrega indicando el insumo, la cantidad, la fecha y la información complementaria permitida.
+2. Toda entrega nueva debe permanecer pendiente hasta que el acopiador la revise.
+3. El acopiador puede confirmar o rechazar una entrega pendiente. Cuando la rechaza, debe quedar registrado el motivo.
+4. Una entrega ya revisada no debe volver a procesarse como si fuera nueva.
+5. Para crear un lote, únicamente pueden seleccionarse entregas confirmadas que todavía no estén asociadas a otro lote.
+6. La fecha de elaboración del lote no puede ser anterior a la fecha de las entregas que lo integran.
+7. Cada lote debe contar con un identificador que permita consultar su información mediante un código QR.
+8. La página pública debe mostrar únicamente la información prevista para el consumidor, sin publicar fotografías originales ni datos privados innecesarios.
+9. Los registros de eventos deben conservar el historial de las acciones realizadas, sin permitir que una modificación sobrescriba silenciosamente los acontecimientos anteriores.
+
+Estas reglas forman parte del comportamiento previsto para el sistema. Su cumplimiento en la red deberá verificarse después de implementar y probar el contrato inteligente.
+
+## 4. Estados y ciclo de vida de los registros
+
+### Estados de una entrega
+
+| Estado | Descripción |
+|---|---|
+| Pendiente | La entrega fue registrada y espera revisión. |
+| Confirmada | El acopiador validó la recepción. |
+| Rechazada | El acopiador indicó que la entrega no cumple con algún criterio. |
+
+### Ciclo de vida de un lote
+
+```mermaid
+flowchart TD
+    A[Seleccionar entregas] --> B{¿Están confirmadas?}
+    B -- No --> C[Corregir selección]
+    C --> A
+    B -- Sí --> D[Validar fechas y disponibilidad]
+    D --> E{¿Cumple las reglas?}
+    E -- No --> F[Mostrar errores]
+    F --> A
+    E -- Sí --> G[Crear lote]
+    G --> H[Generar QR]
+    H --> I[Consultar trazabilidad]
+```
+
+El diagrama representa el flujo funcional esperado. La integración definitiva deberá comprobar que las mismas restricciones se apliquen en la capa de datos y en el contrato inteligente.
+
+## 5. Pruebas y validación del sistema
+
+El proyecto cuenta con 38 pruebas automáticas reportadas en esta etapa, que incluyen pruebas unitarias, pruebas con entradas arbitrarias (*fuzz testing*) y pruebas de invariantes con secuencias aleatorias de acciones.
+
+Entre los comportamientos que se busca validar se encuentran:
+
+- El registro correcto de las entregas.
+- La validación de cantidades y fechas.
+- La confirmación y el rechazo de entregas.
+- La conservación del historial de eventos.
+- La prevención de lotes que incluyan entregas sin confirmar.
+- La protección frente a secuencias de acciones inválidas.
+
+### Pruebas pendientes de ampliar
+
+- Validar la selección de fotografías en un dispositivo móvil real.
+- Comprobar la integración del contrato inteligente en una red de pruebas.
+- Verificar las firmas de los distintos participantes.
+- Comprobar la lectura de los códigos QR en diferentes dispositivos.
+- Revisar los casos de error durante la comunicación con la red.
+
+Los resultados deberán actualizarse conforme se ejecuten nuevas pruebas. No se deben marcar como aprobadas las validaciones que todavía no se hayan realizado.
+
+## 6. Alcance y limitaciones actuales
+
+### Funcionalidades disponibles en la demostración
+
+- Navegación por los roles de productor, acopiador y marca.
+- Registro y revisión de entregas con datos de demostración.
+- Creación local de lotes vinculados con entregas.
+- Consulta de la trazabilidad mediante un código de lote.
+- Generación de un código QR para acceder a la información del lote.
+- Validaciones de datos y pruebas automatizadas.
+
+### Funcionalidades pendientes
+
+- Desplegar e integrar el contrato inteligente en Stellar.
+- Implementar la firma real de las operaciones por cada participante.
+- Conectar la aplicación con los registros publicados en la red.
+- Completar las pruebas en dispositivos móviles físicos.
+- Validar el proceso de consulta pública con lotes publicados en testnet.
+
+**Nota:** las funcionalidades anteriores describen el alcance reportado de la demostración. Antes de publicar una versión nueva, deben contrastarse con el código actualizado del repositorio.
+
+## 7. Plan de trabajo
+
+| Etapa | Actividad | Resultado esperado |
+|---|---|---|
+| 1 | Construcción del frontend | Pantallas y flujo de demostración funcionales. |
+| 2 | Definición de reglas de negocio | Reglas claras para entregas, confirmaciones y lotes. |
+| 3 | Desarrollo del contrato Soroban | Operaciones de trazabilidad implementadas. |
+| 4 | Integración con Stellar testnet | Lectura y escritura de registros en la red de pruebas. |
+| 5 | Pruebas de integración | Validación de las reglas y firmas entre participantes. |
+| 6 | Validación del QR | Consulta pública de la información de los lotes de prueba. |
+| 7 | Documentación final | Instrucciones, evidencias y resultados actualizados. |
+
+Las etapas posteriores a la demostración se consideran objetivos de desarrollo y no deben presentarse como completadas hasta contar con evidencia de su funcionamiento.
+
+## 8. Decisión técnica
 
 **Opción elegida: A — contrato propio.**
 
@@ -182,14 +315,16 @@ inteligente; usaremos una existente del ecosistema, como
 [passkey-kit](https://github.com/kalepail/passkey-kit) (ahora mantenido en `stellar/passkey-kit`) o la
 cuenta de OpenZeppelin para Stellar. La elección entre ambas se hace la semana 4, con pruebas en testnet.
 
-## 3. Participación del equipo
+## 9. Participación del equipo
 
 | Integrante | Usuario de GitHub | Aporte en esta entrega |
 | --- | --- | --- |
 | Luis Cardenas | [LuisAlejandroCR](https://github.com/LuisAlejandroCR) | Proyecto Expo, capa de datos y pruebas, las cinco pantallas, capturas, `README.md` y decisión técnica. |
-| Gisell Arroyo | [G1s3llA](https://github.com/G1s3llA) | ⏳ por completar por Gisell. |
+| Gisell Arroyo | [G1s3llA](https://github.com/G1s3llA) | 
 
-## 4. Bloqueos y siguiente paso
+Apoyo en la documentación del proyecto TONALI, organización de la información en GitHub, descripción de las funcionalidades del sistema y propuesta de mejoras para la documentación técnica. |
+
+## 10. Bloqueos y siguiente paso
 
 **Pendiente:**
 
