@@ -320,9 +320,7 @@ cuenta de OpenZeppelin para Stellar. La elección entre ambas se hace la semana 
 | Integrante | Usuario de GitHub | Aporte en esta entrega |
 | --- | --- | --- |
 | Luis Cardenas | [LuisAlejandroCR](https://github.com/LuisAlejandroCR) | Proyecto Expo, capa de datos y pruebas, las cinco pantallas, capturas, `README.md` y decisión técnica. |
-| Gisell Arroyo | [G1s3llA](https://github.com/G1s3llA) | 
-
-Apoyo en la documentación del proyecto TONALI, organización de la información en GitHub, descripción de las funcionalidades del sistema y propuesta de mejoras para la documentación técnica. |
+| Gisell Arroyo | [G1s3llA](https://github.com/G1s3llA) | Apoyo en la documentación del proyecto TONALI, organización de la información en GitHub, descripción de las funcionalidades del sistema y propuesta de mejoras para la documentación técnica. |
 
 ## 10. Bloqueos y siguiente paso
 
