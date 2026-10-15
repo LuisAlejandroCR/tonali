@@ -104,7 +104,7 @@ Para evidenciar la participación de cada integrante, agregar los enlaces a los 
 | Integrante | Usuario de GitHub | Actividad realizada | Enlace al commit |
 |---|---|---|---|
 | Luis Cardenas | LuisAlejandroCR | [Describir la contribución realizada] | [Agregar enlace] |
-| Gisell Arroyo | G1s3llA | [ Elaboración y actualización de la documentación del MVP, riesgos y plan de validación. .] | [Agregar enlace] |
+| Gisell Arroyo | G1s3llA | [ Elaboración y actualización de la documentación del MVP, riesgos y plan de validación. .] | [https://github.com/LuisAlejandroCR/tonali/blob/main/docs/semana4/Gisell%20Arroyo.md] |
 
 Cada integrante debe registrar al menos un commit propio relacionado con el avance del proyecto durante la semana. Las actividades y los enlaces deben corresponder con los cambios que realmente se hayan realizado.
 
