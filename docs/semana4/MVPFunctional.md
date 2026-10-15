@@ -1,3 +1,7 @@
+<!-- Documentacion.md: entregable grupal de la semana 3 (Functional Proof): front construido,
+decisión técnica de contratos, participación y siguiente paso. No confundir con README.md,
+que sólo dice cómo instalar y correr el proyecto, ni con docs/memoria.md (bitácora interna). -->
+
 # Entregable 4: MVP funcional — TONALI
 
 ## 1. Aprendizajes y ajustes priorizados
